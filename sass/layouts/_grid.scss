@@ -1,0 +1,10 @@
+.container {
+  @include make-container();
+  @include make-container-max-widths();
+
+  @media screen and (min-width: 1400px) {
+    max-width: 1440px;
+  }
+}
+
+ 

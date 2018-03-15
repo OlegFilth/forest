@@ -1,0 +1,24 @@
+@import '../../gulp-dev/node_modules/swiper/dist/css/swiper';
+
+.swiper-button {
+  width: 64px;
+  height: 64px;
+  background-image: linear-gradient(to top, #f31843 0%, #f13b54 100%);
+  background-size: auto;
+  border-radius: 50%;
+}
+
+.swiper-container {
+  overflow: visible;
+}
+
+.swiper-slide {
+  opacity: .3;
+  pointer-events: none;
+  transition: opacity .4s cubic-bezier(.7,0,.3,1);
+}
+
+.swiper-slide-visible {
+  opacity: 1;
+  pointer-events: all;
+}

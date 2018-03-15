@@ -1,0 +1,26 @@
+.btn {
+  font-family: 'Open Sans', sans-serif;
+  border: none;
+  background: none;
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  transition: .3s ease;
+  text-decoration: none;
+  
+  &--rounded {
+    border-radius: 31px;
+  }
+
+  &--primary {
+    background-image: linear-gradient(45deg, #f31843 0%, #f13b54 100%);
+    color: #ffffff;
+    font-family: 'Comfortaa';
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.45px;
+    text-align: center;
+    padding: 20px 28px;
+  }
+}

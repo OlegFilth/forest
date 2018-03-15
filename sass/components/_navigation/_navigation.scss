@@ -1,0 +1,17 @@
+.nav-primary {
+
+  &__item {
+    &:not(last-child) {
+      margin-right: 40px;
+    }
+  }
+   
+
+  &__link {
+    font-size: 16px;
+    text-decoration: none;
+    color: #5c5c5c !important;
+    font-family: 'Comfortaa';
+  }
+
+}

@@ -1,0 +1,6 @@
+@mixin special-sign($sign) {
+  font: normal normal normal 14px/1 FontAwesome;
+  display: inline-block;
+  content: $sign;
+}
+

@@ -1,0 +1,161 @@
+.footer {
+
+  background-color: $darkslategray;
+  padding-top: 30px;
+  padding-bottom: 40px;
+  color: $gainsboro;
+
+  &__inner {
+    @include make-row();
+    @include media-breakpoint-up(md) {
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+  }
+
+  &__info {
+    @include make-col-ready();
+    flex-flow: column nowrap;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    
+    @include media-breakpoint-up(sm) {
+      margin-bottom: 30px;
+    }
+    @include media-breakpoint-up(md) {
+      
+    }
+    @include media-breakpoint-up(lg) {
+      display: block;
+      text-align: left;
+      margin-bottom: 0;
+      @include make-col(4);
+    }
+  }
+
+  &__logo {
+    width: 200px;
+    margin-left: -12px
+  }
+
+  &__paragraph {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+
+  &__link-group {
+    margin-bottom: 20px;
+
+    & .footer__link {
+
+      &:first-child {
+        margin-bottom: 8px;
+      }
+
+      &:active,
+      &:link,
+      &:visited {
+        color: $white;
+        font-weight: bold;
+        text-decoration: none;
+      }
+    }
+  }
+
+  &__icon {
+    margin-right: 10px;
+    width: 18px;
+    height: 18px;
+    stroke: white;
+  }
+
+  &__social {
+    display: flex;
+  }
+
+  &__list {
+    @include make-row();
+    @include make-col-ready();
+    @include make-col(12);
+    list-style-type: none;
+
+    @include media-breakpoint-up(lg) {
+      @include make-col(7);
+      margin-top: 40px;
+    }
+  }
+
+  &__item {
+    @include make-col-ready();
+    display: none;
+    &:not(:first-child) {
+      position: relative;
+     
+      &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        height: 80%;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 1px;
+        left: 0;
+        background-color: $dimgray;
+      }
+    }
+
+    @include media-breakpoint-up(sm) {
+      @include make-col(4);
+      display: block;
+    } 
+
+    @include media-breakpoint-up(xl) {
+      padding-left: 50px;
+    }
+  }
+
+  &__menu {
+    list-style-type: none;
+  }
+
+  &__menu-item {
+    &:first-child { 
+      text-transform: uppercase;
+      margin-bottom: 12px;
+
+      & .footer__link {
+        text-decoration: none;
+        color: $white;
+        font-weight: bold;
+      }
+    }
+
+    & .footer__link {
+      text-decoration: none; 
+    }
+
+    margin-bottom: 9px;
+  }
+  
+  &__link {
+    display: flex;
+    align-items: center;
+    font-weight: 300;
+
+    &:active,
+    &:link,
+    &:visited {
+      color: $gainsboro;
+    }
+
+    @include media-breakpoint-up(sm) {
+      justify-content: center;
+    }
+
+    @include media-breakpoint-up(lg) {
+      justify-content: flex-start;
+    }
+  }
+}
