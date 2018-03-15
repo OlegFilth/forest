@@ -27,12 +27,15 @@ Tags: blog, sidebar, clean, responsive, iResidence
 
 @import 'components/buttons.scss';
 @import 'components/card.scss';
+@import 'components/gallery.scss';
+@import 'components/block-count.scss';
 
 
 
 
 @import 'layouts/grid.scss';
 @import 'layouts/header.scss';
+@import 'layouts/footer.scss';
 
 /*Pages*/
 @import "pages/home.scss";

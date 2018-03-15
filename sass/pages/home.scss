@@ -29,12 +29,14 @@
   background-image: linear-gradient(to right, #f8f8f8  36%, #ffffff 0);
 
   &__title-box {
+    padding-left: 15px;
+    padding-right: 15px;
     @include make-col-offset(7);
   }
 
   &__inner {
     @include make-row();
-    padding-top: 100px;
+    
   }
 
   &__item {
@@ -103,8 +105,63 @@
 .section-gallery {
   background-image: linear-gradient(to right, #f8f8f8  30%, #ffffff 0);
   padding-top: 62px;
+  padding-bottom: 120px;
   overflow: hidden;
   &__title-box {
     max-width: 148px;
+  }
+}
+
+.section-location {
+  padding-top: 120px;
+  
+  &__inner {
+    @include make-row();
+    align-items: center;
+    padding-bottom: 60px;
+  }
+
+  &__title-box {
+    @include media-breakpoint-up(lg) {
+      @include make-col-ready();
+      @include make-col(4);
+      @include make-col-offset(3);
+    }
+  }
+
+  &__description {
+    @include media-breakpoint-up(lg) {
+      @include make-col-ready();
+      @include make-col(4);
+     
+    }
+  }
+}
+
+.section-sale {
+  padding-top: 160px;
+  padding-bottom: 160px;
+
+  &__inner {
+    @include make-row();
+  }
+
+  &__img-box {
+    @include media-breakpoint-up(lg) {
+      @include make-col-ready();
+      @include make-col(6);
+    }
+  }
+
+  &__description {
+    display: flex;
+    flex-flow: row wrap;
+    
+
+    @include media-breakpoint-up(lg) {
+      @include make-col-ready();
+      @include make-col(4);
+      @include make-col-offset(1);
+    }
   }
 }

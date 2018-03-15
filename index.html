@@ -63,8 +63,8 @@
 </div>
 <section class="section-about">
   <div class="container">
-    <div class="section-about__title-box"><h2 class="title-secondary">Инфраструктура поселка</h2></div>
-    <div class="section-about__inner">
+    <div class="section-about__title-box mb-5"><h2 class="title-secondary">Инфраструктура поселка</h2></div>
+    <div class="section-about__inner pt-5 mt-5">
       <div class="section-about__item card">
         <h3 class="title-tertiary mb-4">Окружение</h3>
         <p class="paragraph">2 фермерских рынка, 10 продуктовых супермаркетов, 2 магазина стройматериалов, отделения банков и почты, гостиница, автосервисы и автозаправки.</p>
@@ -99,30 +99,45 @@
 </section>
 <section class="section-gallery">
   <div class="container" >
-    <div class="section-gallery__title-box">
+    <div class="section-gallery__title-box mb-5">
       <h2 class="title-secondary">Фотогалерея и&nbsp;рендеры</h2>
     </div>
-    <div class="gallery section-gallery__gallery swiper-container">
+    <div class="swiper-container">
       <div class="swiper-wrapper">
-        <div class="gallery__item swiper-slide">
-          <img class="u-full-width" src="images/gallery2.jpg" alt="" class="gallery__img">
-          <p class="gallery__description"></p>
+        <div class="card-secondary swiper-slide">
+          <img class="u-full-width" src="images/gallery2.jpg" alt="" class="card-secondary__img">
+          <div class="card-secondary__description mt-4">
+              <p class="card-secondary__title mb-2">Инфраструктура, парк</p>
+              <p class="card-secondary__text">Рендер / 2017 </p>
+          </div>
         </div>
-        <div class="gallery__item swiper-slide">
-          <img class="u-full-width" src="images/gallery3.jpg" alt="" class="gallery__img">
-          <p class="gallery__description"></p>
+        <div class="card-secondary swiper-slide">
+          <img class="u-full-width" src="images/gallery3.jpg" alt="" class="card-secondary__img">
+          <div class="card-secondary__description mt-4">
+              <p class="card-secondary__title mb-2">Инфраструктура, парк</p>
+              <p class="card-secondary__text">Рендер / 2017 </p>
+          </div>
         </div>
-        <div class="gallery__item swiper-slide">
-          <img class="u-full-width" src="images/gallery4.jpg" alt="" class="gallery__img">
-          <p class="gallery__description"></p>
+        <div class="card-secondary__item swiper-slide">
+          <img class="u-full-width" src="images/gallery3.jpg" alt="" class="card-secondary__img">
+          <div class="card-secondary__description mt-4">
+              <p class="card-secondary__title mb-2">Инфраструктура, парк</p>
+              <p class="card-secondary__text">Рендер / 2017 </p>
+          </div>
         </div>
-        <div class="gallery__item swiper-slide">
-          <img class="u-full-width" src="images/gallery4.jpg" alt="" class="gallery__img">
-          <p class="gallery__description"></p>
+        <div class="card-secondary__item swiper-slide">
+          <img class="u-full-width" src="images/gallery3.jpg" alt="" class="card-secondary__img">
+          <div class="card-secondary__description mt-4">
+              <p class="card-secondary__title mb-2">Инфраструктура, парк</p>
+              <p class="card-secondary__text">Рендер / 2017 </p>
+          </div>
         </div>
-        <div class="gallery__item swiper-slide">
-          <img class="u-full-width" src="images/gallery4.jpg" alt="" class="gallery__img">
-          <p class="gallery__description"></p>
+        <div class="card-secondary__item swiper-slide">
+          <img class="u-full-width" src="images/gallery3.jpg" alt="" class="card-secondary__img">
+          <div class="card-secondary__description mt-4">
+              <p class="card-secondary__title">Инфраструктура, парк</p>
+              <p class="card-secondary__text">Рендер / 2017 </p>
+          </div>
         </div>
       </div>
       <div class="swiper-pagination"></div>
@@ -130,12 +145,86 @@
       <!-- If we need navigation buttons -->
       <div class="swiper-button swiper-button-prev"></div>
       <div class="swiper-button swiper-button-next"></div>
-   
-      <!-- If we need scrollbar -->
-      <div class="swiper-scrollbar"></div>
+      
     </div>
   </div>
 </section>
+<section class="section-location">
+  <div class="container">
+    <div class="section-location__inner">
+      <div class="section-location__description">
+        <p class="paragraph mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, qui</p>
+        <a href="" class="link--primary">Проложить маршрут</a>
+      </div>
+      <div class="section-location__title-box">
+        <h2 class="title-secondary">Территориальное расположение</h2>
+      </div>
+    </div>
+  </div>
+ 
+  <div class="embed-responsive embed-responsive-16by9" style="max-height: 525px">
+      <div id="map" class="embed-responsive-item " ></div>
+  </div>
+ 
+</section>
+<section class="section-sale">
+  <div class="container">
+    <div class="section-sale__inner">
+      <div class="section-sale__img-box">
+        <img class="u-full-width mb-5" src="images/sale-img1.jpg" alt=""><img src="" alt="">
+        <img class="u-full-width" src="images/sale-img2.jpg" alt=""><img src="" alt="">
+      </div>
+      <div class="section-sale__description">
+        <h2 class="title-secondary mb-5 pb-1">Акции и спецпредложения</h2>
+        <ol class="block-count">
+          <li class="block-count__item  mb-5">
+            <h3 class="title-tertiary">Выгодное предложение</h3>
+            <p class="paragraph">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sin</p>
+          </li>
+          <li class="block-count__item  mb-5">
+            <h3 class="title-tertiary">Дом + участок</h3>
+            <p class="paragraph">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sin</p>
+          </li>
+          <li class="block-count__item  mb-5">
+            <h3 class="title-tertiary">Ипотека</h3>
+            <p class="paragraph">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sin</p>
+          </li>
+        </ol>
+        <a href="s" class="link--primary">Подробнее об акциях</a>
+      </div>
+    </div>
+  </div>
+</section>
+<footer class="footer">
+  <div class="container">
+    <div class="footer__inner">
+      <div class="footer__info">
+        <a href="" class="footer__logo mb-3"><img src="images/iLogo.png" alt=""></a>
+        <p class="footer__text">
+            Адрес: Посёлок располагается на 65 км МКАД, ул. Пушкина, д. Колотушкина
+        </p>
+      </div>
+      <ul class="footer__list">
+        <li class="footer__list-item">
+          <p class="footer__text mb-3">Телефон</p>
+          <a href="" class="footer__phone">+7 (495) 120-12-92</a>
+        </li>
+        <li class="footer__list-item">
+            <p class="footer__text mb-3">Почта</p>
+            <a href="" class="footer__mail link--primary">info@iresidence.ru</a>
+        </li>
+        <li class="footer__list-item">
+            <p class="footer__text">Социальные сети</p>
+            <ul class="social-list">
+              <li class="social-list__item"><a href="" class="social-list__link"></a></li>
+              <li class="social-list__item"><a href="" class="social-list__link"></a></li>
+              <li class="social-list__item"><a href="" class="social-list__link"></a></li>
+            </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
 <script src="js/bundle.js"></script>
 <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/SplitText.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
@@ -149,7 +238,7 @@
       // Optional parameters
       slidesPerView: 3,
       spaceBetween: 70,
-      centeredSlides: true,
+     // centeredSlides: true,
       watchSlidesVisibility: true,
       // If we need pagination
       // pagination: {
@@ -163,10 +252,17 @@
       },
   
       // And if we need scrollbar
-      scrollbar: {
-        el: '.swiper-scrollbar',
-      },
+      // scrollbar: {
+      //   el: '.swiper-scrollbar',
+      // },
+      
     })
     </script>
+    
+    <script 
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDGa4Eyr0yeZrJKTSksi7Irj6g9zWQrF0g&callback=initMap">
+    </script>
+    <script src="js/map/map-option.js"></script>
+    <script src="js/map/map.js"></script>
 </body>
 </html>

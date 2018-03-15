@@ -28,3 +28,18 @@
     background-repeat: no-repeat;
   }
 }
+
+.card-secondary {
+  
+  &__title {
+    color: #303234;
+    font-family: Comfortaa;
+    font-size: 20px;
+    font-weight: 700;
+  }
+
+  &__text {
+    color: #898989;
+    font-size: 18px;
+  }
+}
