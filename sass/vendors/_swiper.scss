@@ -6,6 +6,25 @@
   background-image: linear-gradient(to top, #f31843 0%, #f13b54 100%);
   background-size: auto;
   border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.swiper-button::before {
+  content: '';
+  display: block;
+  width: 15px;
+  height: 27px;
+
+}
+
+.swiper-button-next::before {
+  background-image: url('images/arrow-next.png');
+}
+
+.swiper-button-prev::before {
+  background-image: url('images/arrow-prev.png');
 }
 
 .swiper-container {
