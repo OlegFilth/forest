@@ -50,7 +50,7 @@
 <section class="section-cover">
   <div class="container u-full-height">
     <div class="section-cover__inner u-full-height">
-      <div class="section-cover__title-box"><h1 class="title-primary">«Новорижский Лес» — <span id="test">коттеджный</span> посёлок бизнес-класса</h1></div>
+      <div class="section-cover__title-box"><h1 class="title-primary">«Новорижский Лес» — <span >коттеджный</span> посёлок бизнес-класса</h1></div>
       <div class="section-cover__description">
         <p class="paragraph mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud</p> 
         <a href="" class="link link--primary">Подробнее о посёле</a>
@@ -58,12 +58,17 @@
     </div>
   </div>
 </section>
-<div class="picture">
-  <img class="u-full-width" src="images/image-cover.jpg" alt="">
+<div class="parallax">
+  <div class="parallax__bcg"></div>
+  <div class="container u-full-height">
+    <div class="parallax__content u-full-height">
+      <h2 class="title-secondary u-text-light">Some magic effects</h2>
+    </div>
+  </div>
 </div>
 <section class="section-about">
   <div class="container">
-    <div class="section-about__title-box mb-5"><h2 class="title-secondary">Инфраструктура поселка</h2></div>
+    <div class="section-about__title-box mb-5"><h2 class="title-secondary js-title-dance">Инфраструктура поселка</h2></div>
     <div class="section-about__inner pt-5 mt-5">
       <div class="section-about__item card">
         <h3 class="title-tertiary mb-4">Окружение</h3>
@@ -88,7 +93,7 @@
   <div class="container">
     <div class="section-plan__inner">
       <div class="section-plan__title-box">
-        <h2 class="title-secondary">Генплан и&nbsp;окружение </h2></div>
+        <h2 id="test" class="title-secondary js-title-dance">Генплан и&nbsp;окружение </h2></div>
       <div class="section-plan__description">
         <p class="paragraph mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
         <a href="" class="link--primary">Получить цены на участки</a>
@@ -100,7 +105,7 @@
 <section class="section-gallery">
   <div class="container" >
     <div class="section-gallery__title-box mb-5">
-      <h2 class="title-secondary">Фотогалерея и&nbsp;рендеры</h2>
+      <h2 class="title-secondary js-title-dance">Фотогалерея и&nbsp;рендеры</h2>
     </div>
     <div class="swiper-container">
       <div class="swiper-wrapper">
@@ -157,7 +162,7 @@
         <a href="" class="link--primary">Проложить маршрут</a>
       </div>
       <div class="section-location__title-box">
-        <h2 class="title-secondary">Территориальное расположение</h2>
+        <h2 class="title-secondary js-title-dance">Территориальное расположение</h2>
       </div>
     </div>
   </div>
@@ -175,7 +180,7 @@
         <img class="u-full-width" src="images/sale-img2.jpg" alt=""><img src="" alt="">
       </div>
       <div class="section-sale__description">
-        <h2 class="title-secondary mb-5 pb-1">Акции и спецпредложения</h2>
+        <h2 class="title-secondary mb-5 pb-1 js-title-dance">Акции и спецпредложения</h2>
         <ol class="block-count">
           <li class="block-count__item  mb-5">
             <h3 class="title-tertiary">Выгодное предложение</h3>
@@ -206,19 +211,19 @@
       </div>
       <ul class="footer__list">
         <li class="footer__list-item">
-          <p class="footer__text mb-3">Телефон</p>
+          <p class="footer__text mb-3">Телефон:</p>
           <a href="" class="footer__phone">+7 (495) 120-12-92</a>
         </li>
         <li class="footer__list-item">
-            <p class="footer__text mb-3">Почта</p>
+            <p class="footer__text mb-3">Почта:</p>
             <a href="" class="footer__mail link--primary">info@iresidence.ru</a>
         </li>
         <li class="footer__list-item">
-            <p class="footer__text">Социальные сети</p>
+            <p class="footer__text mb-3">Социальные сети:</p>
             <ul class="social-list">
-              <li class="social-list__item"><a href="" class="social-list__link"></a></li>
-              <li class="social-list__item"><a href="" class="social-list__link"></a></li>
-              <li class="social-list__item"><a href="" class="social-list__link"></a></li>
+              <li class="social-list__item"><a href="" class="social-list__link social-list__link--inst"></a></li>
+              <li class="social-list__item"><a href="" class="social-list__link social-list__link--vk"></a></li>
+              <li class="social-list__item"><a href="" class="social-list__link social-list__link--fb"></a></li>
             </ul>
         </li>
       </ul>
@@ -226,12 +231,18 @@
   </div>
 </footer>
 <script src="js/bundle.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/plugins/ScrollToPlugin.min.js"></script>
 <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/SplitText.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
+
+
 <script>
-  var mySplitText = new SplitText('#test', {
-    type:"words, chars"
-  });
+ 
+
 </script>
 <script>
     var mySwiper = new Swiper ('.swiper-container', {
@@ -257,12 +268,35 @@
       // },
       
     })
-    </script>
+</script>
     
-    <script 
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDGa4Eyr0yeZrJKTSksi7Irj6g9zWQrF0g&callback=initMap">
-    </script>
-    <script src="js/map/map-option.js"></script>
-    <script src="js/map/map.js"></script>
+<script 
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDGa4Eyr0yeZrJKTSksi7Irj6g9zWQrF0g&callback=initMap">
+</script>
+<script src="js/map/map-option.js"></script>
+<script src="js/map/map.js"></script>
+<script src="js/jquery.easeScroll.js"></script>
+<script src="js/magic.js"></script>
+<script>
+  
+  document.querySelectorAll('.js-title-dance').forEach((element) => {
+
+  var mySplitText = new SplitText(element, {
+    type:"words, chars"
+  });
+
+  var chars = mySplitText.chars;
+
+  var dancingTitleScene = new ScrollMagic.Scene({
+    triggerElement: element,
+    triggerHook: .8,
+    duration: '0'
+  })
+
+  .setTween(TweenMax.staggerFrom(chars, 0.5, {opacity: 0, rotation: 0, y: 100, ease:Back.easeOut},0.02))
+  .addTo(controller);
+  })
+  
+</script>
 </body>
 </html>
