@@ -131,7 +131,10 @@
   }
 
   &__title-box {
-    max-width: 508px;
+    max-width: 175px;
+    @include media-breakpoint-up(md) {
+      max-width: 508px;
+    }
   }
 }
 
