@@ -1,22 +1,24 @@
 
 .section-cover {
- 
-  height: 60vh;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  min-height: 60vh;
+
   &__inner {
     @include make-row();
     align-items: center;
   }
 
-  &__title-box, &__description {
-    @include media-breakpoint-up(lg) {
-      @include make-col-ready();
+  &__title-box {
+    @include make-col-ready();
+    @include media-breakpoint-up(xl) {
       @include make-col(6);
     }
   }
 
   &__description {
-    @include media-breakpoint-up(lg) {
-      @include make-col-ready();
+    @include make-col-ready();
+    @include media-breakpoint-up(xl) {
       @include make-col(3);
       @include make-col-offset(1);
     }
@@ -24,24 +26,45 @@
 }
 
 .section-about {
-  padding-top: 160px;
-  padding-bottom: 230px;
+  padding-top: 60px;
+  padding-bottom: 60px;
   background-image: linear-gradient(to right, #f8f8f8  36%, #ffffff 0);
+
+  @media all and (min-width: 1500px) {
+    padding-top: 160px;
+    padding-bottom: 230px;
+  }
 
   &__title-box {
     padding-left: 15px;
     padding-right: 15px;
-    @include make-col-offset(7);
+    @include media-breakpoint-up(xl) {
+      @include make-col-offset(7);
+    }
   }
 
   &__inner {
     @include make-row();
-    
   }
 
   &__item {
     margin-top: 50px;
     margin-bottom: 30px;
+    @include make-col-ready();
+    @include make-col(10);
+    @include media-breakpoint-up(sm) {
+      @include make-col(6);
+    }
+    @include media-breakpoint-up(lg) {
+      @include make-col(3);
+    }
+    
+    @include media-breakpoint-up(xl) {
+      @include make-col(2);
+      &:not(:last-child) {
+        margin-right: 100px;
+      }
+    }
 
     &:nth-child(1) {
       &::after {
@@ -66,36 +89,32 @@
         background-image: url('images/icon4.png');
       }
     }
-    
-    @include media-breakpoint-up(lg) {
-      @include make-col-ready();
-      @include make-col(2);
-      &:not(:last-child) {
-        margin-right: 100px;
-      }
-    }
+
+   
   }
 }
 
 .section-plan {
-  margin-top: -35px;
-
+  
   &__inner {
     @include make-row();
     align-items: center;
     padding-bottom: 60px;
+    @include media-breakpoint-up(xl) {
+      margin-top: -35px;
+    }
   }
 
   &__title-box {
-    @include media-breakpoint-up(lg) {
-      @include make-col-ready();
+    @include make-col-ready();
+    @include media-breakpoint-up(xl) {
       @include make-col(4);
     }
   }
 
   &__description {
-    @include media-breakpoint-up(lg) {
-      @include make-col-ready();
+    @include make-col-ready();
+    @include media-breakpoint-up(xl) {
       @include make-col(4);
       @include make-col-offset(2);
     }
@@ -105,15 +124,22 @@
 .section-gallery {
   background-image: linear-gradient(to right, #f8f8f8  30%, #ffffff 0);
   padding-top: 62px;
-  padding-bottom: 120px;
+  padding-bottom: 60px;
   overflow: hidden;
+  @include media-breakpoint-up(xl) {
+    padding-bottom: 120px;
+  }
+
   &__title-box {
     max-width: 508px;
   }
 }
 
 .section-location {
-  padding-top: 120px;
+  padding-top: 60px;
+  @include media-breakpoint-up(xl) {
+    padding-top: 120px;
+  }
   
   &__inner {
     @include make-row();
@@ -122,44 +148,49 @@
   }
 
   &__title-box {
-    @include media-breakpoint-up(lg) {
-      @include make-col-ready();
+    order: -1;
+    @include make-col-ready();
+    @include media-breakpoint-up(xl) {
       @include make-col(5);
       @include make-col-offset(3);
+      order: 1;
     }
   }
 
   &__description {
-    @include media-breakpoint-up(lg) {
-      @include make-col-ready();
+    @include make-col-ready();
+    @include media-breakpoint-up(xl) {
       @include make-col(4);
-     
     }
   }
 }
 
 .section-sale {
-  padding-top: 160px;
-  padding-bottom: 160px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  @include media-breakpoint-up(lg) {
+    padding-top: 160px;
+    padding-bottom: 160px;
+  }
 
   &__inner {
     @include make-row();
   }
 
   &__img-box {
+    @include make-col-ready();
     @include media-breakpoint-up(lg) {
-      @include make-col-ready();
       @include make-col(6);
     }
   }
 
   &__description {
+    @include make-col-ready();
     display: flex;
     flex-flow: row wrap;
-    
-
+  
     @include media-breakpoint-up(lg) {
-      @include make-col-ready();
       @include make-col(5);
       @include make-col-offset(1);
     }

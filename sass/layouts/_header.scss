@@ -24,65 +24,32 @@
 
   &__btn-box {
     @include make-col-ready();
-    @include make-col(2);
+    @include make-col(10);
+
+    @include media-breakpoint-up(xl) {
+      @include make-col(2);
+    }
+    text-align: right;
   }
 
   &__navbar {
     padding: 0;
-    @include media-breakpoint-up(lg) {
-      @include make-col-ready();
-      @include make-col(10);
-    }
-
-  }
-
-  &__social { 
-    position: fixed;
-    width: 300px;
-    bottom: 0;
-    left: 0;
-    background: $mineshaft;
-    padding: 20px 0;
-    transform: translateX(-100%);
-    transition: .5s;
-    z-index: 1;
-    &--expanded {
-      transform: translateX(0);
-    }
-
-    @include media-breakpoint-down(md) {
-      width: 230px;
-    }
-
-    @include media-breakpoint-up(xl) { 
-        display: none;
-    } 
-  }
-
-  &__callback {
-    position: relative; 
-    text-align: right;
-    margin-left: auto;
-    justify-content: flex-end;
-    align-self: flex-end;
-
     @include make-col-ready();
-
-    @include media-breakpoint-up(xs) {
-      @include make-col(1);
-    }
-
-    @include media-breakpoint-up(md) {
-      @include make-col(5); 
-    }
-
-    @include media-breakpoint-up(lg) {
-      @include make-col(4); 
-    }
+    @include make-col(2);
 
     @include media-breakpoint-up(xl) {
-      @include make-col(3);
-      align-self: center;
+      @include make-col(10);
+    }
+  }
+
+  &__navbar-brand {
+    display: none;
+    max-width: 140px;
+    @include media-breakpoint-up(xl) {
+      display: block;
+    }
+    @media screen and(min-width: 1500px) {
+      max-width: auto;
     }
   }
 }

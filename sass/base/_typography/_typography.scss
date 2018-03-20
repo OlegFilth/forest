@@ -13,27 +13,49 @@
   opacity: 0.8;
   color: #898989;
   font-family: Comfortaa;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 400;
   line-height: 26px;
+  @include media-breakpoint-up(md) {
+    font-size: 16px;
+  }
 }
 
 .title-primary, .title-secondary {
   font-weight: 800;
   color: #201f1f;
   font-family: "Roboto Slab";
-  font-size: 60px;
+  font-size: 30px;
+  margin-bottom: 20px;
+  @include media-breakpoint-up(md) {
+    font-size: 46px;
+  }
+  @include media-breakpoint-up(xl) {
+    marign-bottom: 0;
+  }
+  @media all and (min-width: 1500px) {
+    font-size: 60px;
+  }
 }
 
 .title-secondary {
-  font-size: 54px;  
+  font-size: 26px;
+  @include media-breakpoint-up(md) {
+    font-size: 36px;
+  }
+  @media all and (min-width: 1500px) {
+    font-size: 54px;  
+  }
 }
 
 .title-tertiary {
   color: #303234;
   font-family: Comfortaa;
-  font-size: 24px;
+  font-size: 18px;
   font-weight: 700;
+  @include media-breakpoint-up(md) {
+    font-size: 24px;
+  }
 }
 
 
@@ -41,21 +63,30 @@
   display: inline-block;
   color: #f13b55;
   font-family: 'Comfortaa';
-  font-size: 22px;
+  font-size: 16px;
   font-weight: 700;
   text-decoration: none;
   position: relative;
+  padding-left: 27px;
+  @include media-breakpoint-up(sm) {
+    padding-left: 0;
+    font-size: 22px;
+  }
 
   &::before {
     content: '';
     display: inline-block;
     position: absolute;
-    left: -27px;
+    left: 0;
     width: 14px;
     height: 14px;
     border: 3px solid;
     top: 5px;
     transform: rotate(45deg);
+
+    @include media-breakpoint-up(sm) {
+      left: -27px;
+    }
   }
   &::after {
     content: '';

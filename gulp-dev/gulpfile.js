@@ -106,12 +106,23 @@ gulp.task('svgstore-filled', () => {
 // JavaScript
 
 gulp.task('javascript', () => {
-  return gulp.src(['../js/**/*.js', '!../gulp-dev/**', '!../js/_minjs/**/*.js', '!../js/main.js', '!../js/bundle.js' ])
+  return gulp.src([
+    '../**/*.js',
+    '!../gulp-dev/**',
+    '!../js/_min.js',
+    '!../js/main.js',
+    '!../js/bundle.js',
+    '!../js/app.js',
+    '!../js/app.min.js' 
+  ])
 	.pipe(jshint({esnext: true}))
   .pipe(jshint.reporter('default'))
+  .pipe(concat('app.js'))
+  .pipe(gulp.dest(js))
   .pipe(uglify())
   .pipe(rename({suffix: '.min'}))
-	.pipe(gulp.dest(js + '_min.js'));
+  //.pipe(rename({suffix: '.min'}))
+	.pipe(gulp.dest(js));
 });
 
 gulp.task('jsbundle', () => {
@@ -138,7 +149,7 @@ gulp.task('watch', () => {
   gulp.watch([ img + 'svgstore/**/*' ], gulp.series('svgstore-filled'));
   gulp.watch([ scss + '**/*.scss' ], gulp.series('css'));
   gulp.watch(['../js/main.js' ], gulp.series('jsbundle'));
-	gulp.watch(['../**/*.js', '!../gulp-dev/**','!../js/_min.js/**/*.js', '!../js/bundle.js' ], gulp.series('javascript'));
+	gulp.watch(['../**/*.js', '!../gulp-dev/**','!../js/_min.js/**/*.js', '!../js/bundle.js', '!../js/app.js', '!../js/app.min.js' ], gulp.series('javascript'));
   gulp.watch(img + 'RAW/**/*.{jpg,JPG,png}', gulp.series('images'));
 	gulp.watch(root + '**/*').on('change', browserSync.reload);
 });

@@ -1,8 +1,12 @@
 .container {
+  max-width: 534px;
   @include make-container();
   @include make-container-max-widths();
+  @include media-breakpoint-up(sm) {
+    padding-left: 38px;
+  }
 
-  @media screen and (min-width: 1400px) {
+  @media screen and (min-width: 1500px) {
     max-width: 1440px;
   }
 }

@@ -265,6 +265,6 @@ function makeMapOption() {
         ]
     }
 ]
-}
-return mapOptions;
 };
+return mapOptions;
+}

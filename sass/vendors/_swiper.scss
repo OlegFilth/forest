@@ -28,13 +28,20 @@
 }
 
 .swiper-container {
-  overflow: visible;
+  width: 320px;
+  margin-left: 0;
+  @include media-breakpoint-up(sm) {
+    margin-left: auto;
+    overflow: visible;
+    width: auto;
+  }
+  
 }
 
 .swiper-slide {
   opacity: .3;
   pointer-events: none;
-  transition: opacity .4s cubic-bezier(.7,0,.3,1);
+  //transition: opacity .4s cubic-bezier(.7,0,.3,1);
 }
 
 .swiper-slide-visible {
