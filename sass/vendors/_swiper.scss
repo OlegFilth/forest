@@ -1,22 +1,40 @@
 @import '../../gulp-dev/node_modules/swiper/dist/css/swiper';
 
+.swiper-buttons {
+  position: relative;
+  max-width: 120px;
+  margin-left: auto;
+  @include media-breakpoint-up(lg) {
+    max-width: 145px;
+  }
+}
+
 .swiper-button {
-  width: 64px;
-  height: 64px;
+  width: 44px;
+  height: 44px;
   background-image: linear-gradient(to top, #f31843 0%, #f13b54 100%);
   background-size: auto;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
+  @include media-breakpoint-up(lg) {
+    width: 54px;
+    height: 54px;
+  }
 }
 
 .swiper-button::before {
   content: '';
   display: block;
-  width: 15px;
-  height: 27px;
-
+  width: 20px;
+  height: 20px;
+  background-size: 70%;
+  background-position: center;
+  background-repeat: no-repeat;
+  @include media-breakpoint-up(lg) {
+    background-size: 90%;
+  }
 }
 
 .swiper-button-next::before {
@@ -28,14 +46,20 @@
 }
 
 .swiper-container {
-  width: 320px;
   margin-left: 0;
-  @include media-breakpoint-up(sm) {
-    margin-left: auto;
-    overflow: visible;
-    width: auto;
+  margin-top: -72px;
+  overflow: visible;
+
+  @include media-breakpoint-up(lg) {
+    margin-top: 0;
   }
-  
+  @media screen and (max-width:375px) {
+    width: 290px
+  }
+}
+
+.swiper-wrapper {
+  padding-top: 90px;
 }
 
 .swiper-slide {

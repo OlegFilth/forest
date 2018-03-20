@@ -1,17 +1,22 @@
 .card {
   position: relative;
-  max-width: 260px;
+  max-width: 310px;
   
   &::before {
     content: '';
     border: 11px solid #9adbbc;
-    width: 120px;
-    height: 120px;
+    width: 60px;
+    height: 60px;
     display: block;
-    margin-bottom: 75px;
+    margin-bottom: 35px;
     top: 80px;
     margin-left: 30px;
     transform: rotate(45deg);
+    @include media-breakpoint-up(xl) {
+      width: 120px;
+      height: 120px;
+      margin-bottom: 75px;
+    }
   }
 
   &::after {
@@ -20,11 +25,15 @@
     position: absolute;
     top: 10px;
     left: 50px;
-    width: 120px;
-    height: 120px;
+    width: 60px;
+    height: 60px;
     background-size: contain;
     background-image: url('images/icon1.png');
     background-repeat: no-repeat;
+    @include media-breakpoint-up(xl) {
+      width: 120px;
+      height: 120px;
+    }
   }
 }
 

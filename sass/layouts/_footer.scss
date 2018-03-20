@@ -59,11 +59,18 @@
     font-weight: 400;
   }
 
+  &__logo-box {
+    display: block;
+  }
+
   &__logo {
     display: block;
     position: relative;
+    width: 100%;
+    max-width: 200px;
     @include media-breakpoint-up(sm) {
       left: -30px;
+      max-width: 260px;
     }
   }
 

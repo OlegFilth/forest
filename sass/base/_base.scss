@@ -10,6 +10,7 @@ body {
   box-sizing: border-box;
   font-family: 'Open Sans', sans-serif;
   fill: currentColor;
+  padding-top: 60px;
 
   @include media-breakpoint-down(lg) {
     margin-top: 34px;

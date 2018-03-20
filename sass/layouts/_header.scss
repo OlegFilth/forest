@@ -1,19 +1,39 @@
 .header {
-  
+  padding-top: 22px;
+  padding-bottom: 22px;
   z-index: 3;
   top: 0;
   width: 100%;
-  padding-top: 10px;
+  position: fixed;
   background: $white;
+  transition: .3s ease;
 
+  @include media-breakpoint-up(xl) {
+    padding-bottom: 10px;
+  }
 
-  //  @include media-breakpoint-up(xl) {
-  //    -webkit-transform: translateZ(0);
-  //    //transition: transform 0s .5s;
-  //  }
+  &--scrolled {
+    padding-top: 16px;
+    padding-bottom: 16px;
+    box-shadow: -4px 0 10px 0 rgba(black, .2);
 
-  @include media-breakpoint-down(lg) {
-    padding-bottom: 8px;
+    @include media-breakpoint-up(xl) {
+      padding-top: 3px;
+      padding-bottom: 3px;
+    }
+    
+    & .header__logo {
+      width: 130px;
+    }
+
+    & .btn--primary {
+      padding: 12px 17px;
+    }
+  }
+
+  &__logo {
+    width: 168px;
+    transition: .3s ease;
   }
 
   &__inner {

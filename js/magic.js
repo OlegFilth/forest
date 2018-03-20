@@ -39,3 +39,11 @@ var slideParallaxScene = new ScrollMagic.Scene({
 
 .setTween(parallaxTL)
 .addTo(controller);
+
+
+var topMenuEffect = new ScrollMagic.Scene({
+    triggerElement: '.link--primary',
+    triggerHook: .2
+})
+.setClassToggle('.header', 'header--scrolled')
+.addTo(controller);
