@@ -29,4 +29,26 @@
       letter-spacing: 0.45px;
     }
   }
+
+  &--close {
+    position: relative;
+    z-index: 1;
+    &::before, &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 16px;
+      height: 1px;
+      background-color: #242020;
+      top: 50%;
+      left: calc(50% - 8px);
+    }
+
+    &::before {
+      transform: rotate(45deg) ;
+    }
+    &::after {
+      transform: rotate(-45deg) ;
+    }
+  }
 }
