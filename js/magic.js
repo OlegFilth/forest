@@ -47,3 +47,17 @@ var topMenuEffect = new ScrollMagic.Scene({
 })
 .setClassToggle('.header', 'header--scrolled')
 .addTo(controller);
+
+function onSmoothScrollLinkClick(event) {
+  event.preventDefault();
+  var anhor = this.getAttribute('href');
+  console.log(anhor);
+  TweenLite.to(window, 1, {scrollTo:{y:anhor, offsetY:70}});
+}
+document.querySelectorAll('.js-smooth-scroll').forEach((element) => {
+  element.onclick = onSmoothScrollLinkClick;
+});
+
+
+
+

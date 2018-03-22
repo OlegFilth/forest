@@ -48,5 +48,11 @@
   },
   "browserify-shim": {
     "jquery": "global:jQuery"
+  },
+  
+  "eslintConfig": {
+    "globals": {
+      "window": true
+    }
   }
 }

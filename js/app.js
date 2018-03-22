@@ -509,6 +509,21 @@ var topMenuEffect = new ScrollMagic.Scene({
 })
 .setClassToggle('.header', 'header--scrolled')
 .addTo(controller);
+
+function onSmoothScrollLinkClick(event) {
+  event.preventDefault();
+  var anhor = this.getAttribute('href');
+  console.log(anhor);
+  TweenLite.to(window, 1, {scrollTo:{y:anhor, offsetY:70}});
+}
+document.querySelectorAll('.js-smooth-scroll').forEach((element) => {
+  element.onclick = onSmoothScrollLinkClick;
+});
+
+
+
+
+
 var mySwiper = new Swiper ('.swiper-container', {
   // Optional parameters
   slidesPerView: 3,
@@ -810,6 +825,27 @@ function init() {
   var mapElement = document.getElementById('map');
   var map = new google.maps.Map(mapElement, mapOption);
 }
+'use strict';
+(()=>{
+  var placeholders = document.querySelectorAll('.input-primary');
+
+  function onInputField() {
+    var field = this.parentNode;
+    var placeholder = field.querySelector('.placeholder');
+    
+    if (this.value.length > 0) {
+      placeholder.classList.add('zoomOut', 'animated');
+    } else {
+      placeholder.classList.remove('zoomOut', 'animated');
+      placeholder.classList.add('zoomIn', 'animated');
+    }
+  }
+
+  placeholders .forEach((element) => {
+    element.oninput =  onInputField;
+  });
+})();
+
 (() => {
   'use strict';
   window.onload = expandNav;

@@ -89,6 +89,13 @@
     &::before {
       display:none;
     }
+   
+    &:hover {
+      color: #f13b55;
+      &::after {
+        background-color: #f13b55;
+      }
+    }
   }
 
   &__social-list {
