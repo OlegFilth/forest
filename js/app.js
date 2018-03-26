@@ -10,7 +10,7 @@ $('.cf-ajax').each(function(ind, el) {
 		
 		$.post('/cgi/formstub.php', data, function(){
 			$(self).fadeOut();
-			$(self).parent().find('cf-ajax-success').fadeIn();
+			$(self).parent().find('.cf-ajax-success').fadeIn();
 		});
 	});
 });
