@@ -622,7 +622,7 @@ function init() {
   var map = new google.maps.Map(mapElement, mapOption);
   var marker = new google.maps.Marker({
     position: {lat: 55.841321, lng: 36.475680},
-    icon: '../../images/mapmarker.png',
+    icon: '../images/mapmarker.png',
     map: map
   })
 }
