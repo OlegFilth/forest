@@ -45,6 +45,8 @@
 
   &__inner {
     @include make-row();
+    margin-right: -$grid-gutter-middle;
+    margin-left: -$grid-gutter-middle;
   }
 
   &__item {
@@ -60,10 +62,9 @@
     }
     
     @include media-breakpoint-up(xl) {
-      @include make-col(2);
-      &:not(:last-child) {
-        margin-right: 100px;
-      }
+      @include make-col(3);
+      padding-left: $grid-gutter-middle;
+      padding-right: $grid-gutter-middle; 
     }
 
     &:nth-child(1) {

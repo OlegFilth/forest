@@ -1,19 +1,3 @@
-// Ajax-запрос с сохранением UTM меток
-$('.cf-ajax').each(function(ind, el) {
-	$(el).on('submit', function(event) {
-		var self = this;
-		event.preventDefault();
-		var data = $(this).serializeArray();
-		window.location.search.slice(1, location.search.length).split('&')
-			.filter(function(el) {return el.slice(0,4) === 'utm_'})
-			.map(function(el) {var ret=el.split('='); data.push({name: ret[0], value: ret[1]})});
-		
-		$.post('/cgi/formstub.php', data, function(){
-			$(self).fadeOut();
-			$(self).parent().find('cf-ajax-success').fadeIn();
-		});
-	});
-});
 
 $.fn.easeScroll = function(options) {
     ! function() {
@@ -363,7 +347,7 @@ var mySwiper = new Swiper ('.swiper-container', {
 function makeMapOption() {
  var mapOptions = {
   zoom: 8,
- center: new google.maps.LatLng(55.588518, 37.623285),
+ center: {lat: 55.841321, lng: 36.475680},
  styles: [
     {
         "featureType": "all",
@@ -636,6 +620,11 @@ var mapOption = makeMapOption();
 function init() {
   var mapElement = document.getElementById('map');
   var map = new google.maps.Map(mapElement, mapOption);
+  var marker = new google.maps.Marker({
+    position: {lat: 55.841321, lng: 36.475680},
+    icon: '../../images/mapmarker.png',
+    map: map
+  })
 }
 'use strict';
 (()=>{

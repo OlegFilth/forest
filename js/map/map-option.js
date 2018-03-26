@@ -1,7 +1,7 @@
 function makeMapOption() {
  var mapOptions = {
   zoom: 8,
- center: new google.maps.LatLng(55.588518, 37.623285),
+ center: {lat: 55.841321, lng: 36.475680},
  styles: [
     {
         "featureType": "all",
