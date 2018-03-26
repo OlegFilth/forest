@@ -113,7 +113,6 @@ gulp.task('javascript', () => {
     '!../js/main.js',
     '!../js/bundle.js',
     '!../js/app.js',
-	  '!../js/ajax-contact-form.js',
     '!../js/app.min.js' 
   ])
 	.pipe(jshint({esnext: true}))

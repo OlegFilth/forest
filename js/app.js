@@ -1,3 +1,19 @@
+// Ajax-запрос с сохранением UTM меток
+$('.cf-ajax').each(function(ind, el) {
+	$(el).on('submit', function(event) {
+		var self = this;
+		event.preventDefault();
+		var data = $(this).serializeArray();
+		window.location.search.slice(1, location.search.length).split('&')
+			.filter(function(el) {return el.slice(0,4) === 'utm_'})
+			.map(function(el) {var ret=el.split('='); data.push({name: ret[0], value: ret[1]})});
+		
+		$.post('/cgi/formstub.php', data, function(){
+			$(self).fadeOut();
+			$(self).parent().find('cf-ajax-success').fadeIn();
+		});
+	});
+});
 
 $.fn.easeScroll = function(options) {
     ! function() {
@@ -281,22 +297,6 @@ document.querySelectorAll('.js-title-dance').forEach((element) => {
   .setTween(titleDanceTL)
   .addTo(controller);
 });
-
-
-var parallaxTL = new TimelineMax();
-parallaxTL
-  .from('.parallax__content', .3, {autoAlpha:0, ease:Power0.easeNone}, .3)
-  .from('.parallax__bcg', 1, {y: '-50%', ease:Power0.easeNone}, 0);
-
-
-var slideParallaxScene = new ScrollMagic.Scene({
-    triggerElement: '.parallax',
-    triggerHook: 1,
-    duration: '100%'
-})
-
-.setTween(parallaxTL)
-.addTo(controller);
 
 
 var topMenuEffect = new ScrollMagic.Scene({
