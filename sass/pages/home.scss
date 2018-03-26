@@ -45,8 +45,10 @@
 
   &__inner {
     @include make-row();
-    margin-right: -$grid-gutter-middle;
-    margin-left: -$grid-gutter-middle;
+    @include media-breakpoint-up(xl) {
+      margin-right: -$grid-gutter-middle;
+      margin-left: -$grid-gutter-middle;
+    }
   }
 
   &__item {

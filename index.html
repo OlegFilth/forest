@@ -64,7 +64,8 @@
     </div>
   </section>
   <div class="video-cover">
-    <video class="video-cover__video" width="100%" height="auto" autoplay="autoplay"  preload="auto">
+    <img class="video-cover__img" src="images/forest.jpg" alt="">
+    <video class=" video-cover__video" width="100%" height="auto" autoplay="autoplay"  preload="auto">
       <source  src="assets/video/forest.mp4">
       <source  src="assets/video/forest.webm">
     </video>
@@ -132,6 +133,13 @@
             </div>
           </div>
           <div class="card-secondary__item swiper-slide">
+            <img class="u-full-width card-secondary__img" src="images/gallery/10.jpg" alt="">
+            <div class="card-secondary__description mt-4">
+              <p class="card-secondary__title">Генеральный план</p>
+              <p class="card-secondary__text">Рендер / 2018 </p>
+            </div>
+          </div>
+          <div class="card-secondary__item swiper-slide">
             <img class="u-full-width card-secondary__img" src="images/gallery/4.jpg" alt="">
             <div class="card-secondary__description mt-4">
                 <p class="card-secondary__title mb-2">Пример архитектуры, дома</p>
@@ -143,6 +151,13 @@
             <div class="card-secondary__description mt-4">
                 <p class="card-secondary__title">Пример архитектуры, дома</p>
                 <p class="card-secondary__text">Рендер / 2018 </p>
+            </div>
+          </div>
+          <div class="card-secondary__item swiper-slide">
+            <img class="u-full-width card-secondary__img" src="images/gallery/9.jpg" alt="">
+            <div class="card-secondary__description mt-4">
+              <p class="card-secondary__title">Генеральный план</p>
+              <p class="card-secondary__text">Рендер / 2018 </p>
             </div>
           </div>
           <div class="card-secondary__item swiper-slide">
@@ -166,20 +181,6 @@
               <p class="card-secondary__text">Рендер / 2018 </p>
             </div>
           </div>
-          <div class="card-secondary__item swiper-slide">
-            <img class="u-full-width card-secondary__img" src="images/gallery/9.jpg" alt="">
-            <div class="card-secondary__description mt-4">
-              <p class="card-secondary__title">Генеральный план</p>
-              <p class="card-secondary__text">Рендер / 2018 </p>
-            </div>
-          </div>
-          <div class="card-secondary__item swiper-slide">
-            <img class="u-full-width card-secondary__img" src="images/gallery/10.jpg" alt="">
-            <div class="card-secondary__description mt-4">
-              <p class="card-secondary__title">Генеральный план</p>
-              <p class="card-secondary__text">Рендер / 2018 </p>
-            </div>
-          </div>
         </div>
         <div class="swiper-pagination"></div>  
       </div>
@@ -190,7 +191,7 @@
       <div class="section-location__inner">
         <div class="section-location__description">
           <p class="paragraph mb-4">Поселок расположен в&nbsp;60&nbsp;км от&nbsp;Москвы по&nbsp;Новорижскому шоссе. Рядом находится озеро Тростянское, реликтовый водоем ледникового периода. Благодаря расположению в&nbsp;зеленой зоне это единственный поселок с&nbsp;участками в&nbsp;лесу.</p>
-          <a target="_blank" href="https://www.google.com/maps/dir//55.841321,+36.475680/@55.8202199,36.5128559,11z/data=!4m6!4m5!1m0!1m3!2m2!1d36.47568!2d55.841321?hl=ru-RU" class="link--primary">Проложить маршрут</a>
+          <a target="_blank" href="https://www.google.com/maps/dir/55.7906237,37.3684383/55.8428076,36.4789697/@55.8063681,36.7440256,10z/data=!4m2!4m1!3e0?hl=ru-RU" class="link--primary">Проложить маршрут</a>
         </div>
         <div class="section-location__title-box">
           <h2 class="title-secondary js-title-dance">Территориальное расположение</h2>
@@ -274,7 +275,7 @@
       <div class="modal-body modal-primary__body">
         <div class="modal-primary__inner">
           <div class="modal-primary__info">
-            <h3 class="title-secondary"> Зафиксируйте<br>специальные условия</h3>
+            <h3 class="title-secondary modal-primary__title"> Зафиксируйте<br>специальные условия</h3>
             <p class="paragraph mb-4">Укажите ваши контактные данные и мы вышлем вам генеральный план посёлка с актуальной стоимостью.</p>
             <form action="/cgi/formstub.php" class="cf-ajax form-primary modal-primary__form" method="post">
 			  <input id="form-primary-workemail" class="visuallyhidden" name="workemail" type="text">
@@ -292,9 +293,10 @@
                 <input id="form-primary-phone" name="phone" type="tel" class="input-primary" required>
                 <label class="placeholder" for="form-primary-phone">Ваш номер телефона <span class="text-danger">*</span></label>
               </div>
-              <button type="submit" class="btn btn--primary btn--rounded mt-3">
+              <button type="submit" class="modal-primary__btn btn btn--primary btn--rounded mt-3">
                 Получить предложение
               </button>
+              <div class="cf-ajax-success mt-3">Спасибо</div>
             </form>
           </div>
           <div class="modal-primary__img-box"><img src="images/gallery2.jpg" alt="" class="img modal-primary__img"></div>

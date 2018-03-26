@@ -24,7 +24,6 @@ Tags: blog, sidebar, clean, responsive, iResidence
 @import 'base/utilities.scss'; 
 @import 'base/effects.scss'; 
 
-
 @import 'components/_navigation/navigation.scss';
 
 @import 'components/buttons.scss';
@@ -33,13 +32,10 @@ Tags: blog, sidebar, clean, responsive, iResidence
 @import 'components/social.scss';
 @import 'components/modal.scss';
 @import 'components/_form/form.scss';
-
-
-
+@import 'components/video.scss';
 
 @import 'layouts/grid.scss';
 @import 'layouts/header.scss';
 @import 'layouts/footer.scss';
 
-/*Pages*/
 @import "pages/home.scss";
