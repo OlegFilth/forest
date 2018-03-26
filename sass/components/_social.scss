@@ -1,0 +1,32 @@
+.social-list {
+  list-style-type: none;
+  display: flex;
+
+  &__item {
+    margin-right: 18px;
+  }
+
+  &__link {
+    display: block;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    &--inst {
+      width: 28px;
+      height: 28px;
+      background-image: url('images/inst.png')
+    }
+
+    &--vk {
+      width: 44px;
+      height: 25px;
+      background-image: url('images/vk.png')
+    }
+
+    &--fb {
+      width: 12px;
+      height: 25px;
+      background-image: url('images/facebook.png')
+    }
+  }
+}
