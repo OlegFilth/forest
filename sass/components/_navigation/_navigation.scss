@@ -10,9 +10,11 @@
 }
 
 .navbar-primary {
-  
+  align-items: stretch;
+
   &__collapse {
     display: block;
+    align-items: stretch;
   }
 
   &__fadelayout {
@@ -53,7 +55,7 @@
       transition: none;
       position: static;
       padding-top: 0;
-      overflow-y: hidden;
+      overflow: visible;
       height: auto;
       max-width: none;
       transform: translateX(0);
@@ -82,17 +84,8 @@
 
 .nav-primary {
 
-  &__item {
-    margin-right: 20px;
-
-    @media all and (min-width: 1500px) {
-      &:not(last-child) {
-        margin-right: 40px;
-      }
-    }
-  }
-
   &__link {
+    display: block;
     font-size: 14px;
     text-decoration: none;
     color: #5c5c5c !important;

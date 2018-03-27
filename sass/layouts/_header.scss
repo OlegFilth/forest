@@ -9,7 +9,8 @@
   transition: .3s ease;
 
   @include media-breakpoint-up(xl) {
-    padding-bottom: 10px;
+    padding-bottom: 0;
+    padding-top: 0;
   }
 
   &--scrolled {
@@ -18,8 +19,8 @@
     box-shadow: -4px 0 10px 0 rgba(black, .2);
 
     @include media-breakpoint-up(xl) {
-      padding-top: 3px;
-      padding-bottom: 3px;
+      padding-top: 0;
+      padding-bottom: 0;
     }
     
     & .header__logo { 
@@ -70,6 +71,34 @@
     }
     @media screen and(min-width: 1500px) {
       max-width: auto;
+    }
+  }
+
+  &__link {
+    padding-top: 48px;
+    padding-bottom: 10px;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+    @media screen and (min-width: 1500px) {
+      padding-left: 15px !important;
+      padding-right: 15px !important;
+    }
+
+    &--accent {
+      position: relative;
+      color: white !important;
+      &::before {
+        content: '';
+        position: absolute;
+        display: block;
+        top: 0;
+        left: 0;
+        height: 144%;
+        z-index: -1;
+        width: 100%;
+        background-image: linear-gradient(to bottom , #80f0cc,  #51b683);
+        clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);
+      }
     }
   }
 }
