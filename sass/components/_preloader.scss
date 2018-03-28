@@ -1,0 +1,53 @@
+.js-preloader {
+  overflow: hidden;
+}
+
+.preloader {
+  position: fixed;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  align-items: center;
+  justify-content: center;
+  background-color: hsl(151, 47%, 73%);
+  z-index: 15;
+}
+
+.loader {
+	$loader-color: #fff;
+	$loader-speed: 1.25s;
+
+	height: 80px;
+	width: 80px;
+	outline: 3px solid $loader-color;
+	animation: loader--spinning $loader-speed infinite ease;
+	
+	@keyframes loader--spinning {
+	 50% { transform: rotate(45deg); }
+	 100% { transform: rotate(90deg); }
+  }
+  
+  &::after {
+		content: '';
+		display: block;
+		height: inherit;
+		width: inherit;
+		outline: 3px solid $loader-color;
+		animation-name: loader--squeeze;
+		animation-duration: $loader-speed;
+		animation-iteration-count: infinite;
+		animation-timing-function: ease;
+  }
+
+  @keyframes loader--squeeze {
+		0% { transform: scale(1); }
+		25% { transform: scale(.85); }
+		50% { transform: scale(1); }
+		75% { transform: scale(.85); }
+		100% { transform: scale(1); }
+	}
+}
